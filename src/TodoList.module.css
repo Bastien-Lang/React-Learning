@@ -5,8 +5,11 @@
 }
 
 .ul{
-    color: black;
+    color: white;
     cursor: pointer;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .ul li {
@@ -14,7 +17,9 @@
     margin: 2rem;
     background-color: red;
     list-style: none;
-    border : 5px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+    user-select: none;
 }
 
 .ul li:hover {

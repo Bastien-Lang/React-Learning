@@ -13,4 +13,13 @@ let myTask = [
     }
 ]
 
-export {myTask}
+function addTask(task){
+    let newid = myTask[myTask.length - 1].id + 1
+    let newTask = {
+        id: newid,
+        name: task
+    }
+    return newTask
+}
+
+export {myTask, addTask}

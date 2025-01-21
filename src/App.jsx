@@ -1,4 +1,3 @@
-import {myTask} from "./Data/data.js";
 import TodoList from './TodoList.jsx'
 import './App.css'
 
@@ -11,7 +10,7 @@ function App() {
                   Hello {name}!
               </p>
           </div>
-          <TodoList task={myTask} />
+          <TodoList />
       </>
   )
 }
