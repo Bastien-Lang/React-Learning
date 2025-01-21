@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import {myTask} from "./Data/data.js";
-import './App.css'
+import {myTask} from "../Data/data.js";
+import './app.module.css'
+import Tasks from '../Tasks'
+import styles from './app.module.css'
 
 function App() {
     let name = 'Toto'
@@ -15,10 +14,9 @@ function App() {
           </div>
           <div className='Data'>
                 <h1>My Tasks</h1>
-                <ul>
-                    {myTask.map((task) => (
-                        <li key={task.id}>{task.name}</li>
-                    ))}
+                <h2 className='title'>I love these tasks</h2>
+                <ul className={styles.ul}>
+                    {myTask.map((task) => (<Tasks task={task} />))}
                 </ul>
           </div>
       </>
