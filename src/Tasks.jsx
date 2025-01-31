@@ -5,8 +5,6 @@ function Tasks(props){
     function handleClick(){
         props.task.status=!props.task.status
         props.sortTask(props.task)
-
-
     }
     return (
         <li
