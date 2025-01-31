@@ -10,13 +10,19 @@ function TodoList(props){
         let newTask = addTask(name);
         setTask([...task, newTask]);
     }
-    console.log(task);
+
+    function handleSortTask(currentTask){
+        let sortedTask = task.filter((task) => task !== currentTask);
+        sortedTask.push(currentTask)
+        setTask([...sortedTask]);
+    }
+
     return(
         <div className='Data'>
             <h1>My Tasks</h1>
             <h2 className='title'>I love these tasks</h2>
             <ul className={styles.ul}>
-                {task.map((task) => (<Tasks task={task}/>))}
+                {task.map((task) => (<Tasks task={task} sortTask={handleSortTask}/>))}
             </ul>
             <Form setTask={handleAddTask}/>
         </div>

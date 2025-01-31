@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { addTask } from './Data/data';
 
 
 export function Form({setTask}){
@@ -13,7 +12,6 @@ export function Form({setTask}){
         setTask(value);
     }
 
-    console.log(value);
     return(
         <form onSubmit={handleSubmit} >
             <input type="text" value={value} onChange={handleChange}/>

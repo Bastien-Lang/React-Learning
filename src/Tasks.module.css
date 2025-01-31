@@ -1,0 +1,8 @@
+.Clicked {
+    background-color: green;
+    text-decoration: line-through;
+}
+
+.Default {
+    background-color: red;
+}
