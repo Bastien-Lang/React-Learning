@@ -1,15 +1,11 @@
 function tasks(props){
     let clicked = false
     function handleClick(e){
-        if (clicked) {
-            e.target.style.textDecoration = 'none'
-            e.target.style.backgroundColor = "red"
-            clicked = false
-        }
-        else {
+        if (!clicked) {
             e.target.style.textDecoration = 'line-through'
             e.target.style.backgroundColor = "green"
             clicked = true
+            console.log(props.task.id)
         }
     }
     return  (
