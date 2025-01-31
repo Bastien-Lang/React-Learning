@@ -5,7 +5,7 @@ function tasks(props){
             e.target.style.textDecoration = 'line-through'
             e.target.style.backgroundColor = "green"
             clicked = true
-            console.log(props.task.id)
+            let index = props.task.id             
         }
     }
     return  (
