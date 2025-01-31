@@ -1,15 +1,21 @@
-function tasks(props){
-    let clicked = false
-    function handleClick(e){
-        if (!clicked) {
-            e.target.style.textDecoration = 'line-through'
-            e.target.style.backgroundColor = "green"
-            clicked = true
-            let index = props.task.id             
-        }
+import { useState } from "react";
+import styles from "./Tasks.module.css";
+
+function Tasks(props){
+    function handleClick(){
+        props.task.status=!props.task.status
+        props.sortTask(props.task)
+
+
     }
-    return  (
-        <li key={props.task.id} onClick={handleClick}>{props.task.name}</li>
+    return (
+        <li
+            key={props.task.id}
+            onClick={handleClick}
+            className={props.task.status?styles.Clicked:styles.Default}
+        >
+            {props.task.name}
+        </li>
     )
 }
 
